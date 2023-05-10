@@ -25,7 +25,8 @@ namespace UsuariosApp.API.Controllers
         [ProducesResponseType(typeof(AutenticarResponseDTO), StatusCodes.Status200OK)]
         public IActionResult Autenticar(AutenticarRequestDTO usuarioDto)
         {
-            return Ok(_usuarioAppService.Autenticar(usuarioDto));
+            //return Ok(_usuarioAppService.Autenticar(usuarioDto));
+            throw new NotImplementedException();
         }
         
         /// <summary>
@@ -36,7 +37,7 @@ namespace UsuariosApp.API.Controllers
         [ProducesResponseType(typeof(CriarContaResponseDTO), StatusCodes.Status201Created)]
         public IActionResult CriarConta(CriarContaRequestDTO usuarioDto) 
         {
-            return Ok(_usuarioAppService.CriarConta(usuarioDto));
+            return StatusCode(201, _usuarioAppService.CriarConta(usuarioDto));
         }
     }
 }
