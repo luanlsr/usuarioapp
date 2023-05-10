@@ -17,6 +17,7 @@ namespace UsuariosApp.API.Controllers
             _usuarioAppService = usuarioAppService;
         }
 
+
         /// <summary>
         /// Autenticação de usuários
         /// </summary>
