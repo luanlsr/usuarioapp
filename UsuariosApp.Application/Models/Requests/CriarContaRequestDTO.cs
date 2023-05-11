@@ -9,7 +9,7 @@ namespace UsuariosApp.Application.Models.Requests
 {
     public class CriarContaRequestDTO
     {
-        [RegularExpression("^[A-Za-zÀ-Üà-Ü\\s]{8,150}$",
+        [RegularExpression("^[a-zA-ZÀ-ÿ\\s]{8,150}$", 
             ErrorMessage = "Informe um nome válido 8 a 150 caracteres.")]
         [Required(ErrorMessage = "Informe o nome do usuário")]
         public string? Nome { get; set; }

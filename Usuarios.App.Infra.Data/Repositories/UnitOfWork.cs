@@ -21,12 +21,12 @@ namespace Usuarios.App.Infra.Data.Repositories
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _dateContext?.Dispose();
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            _dateContext.SaveChanges();
         }
     }
 }

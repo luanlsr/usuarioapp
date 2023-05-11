@@ -22,4 +22,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Usuarios.App.Infra.Data\Usuarios.App.Infra.Data.csproj" />
+    <ProjectReference Include="..\UsuariosApp.API\UsuariosApp.API.csproj" />
+    <ProjectReference Include="..\UsuariosApp.Application\UsuariosApp.Application.csproj" />
+    <ProjectReference Include="..\UsuariosApp.Domain\UsuariosApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

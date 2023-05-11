@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integração", "Integraçã
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unitários", "Unitários", "{90B325E6-0719-488B-A4DB-DE3201F78131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuarioTest", "UsuarioTest\UsuarioTest.csproj", "{85D1D1F0-74E3-49F5-BA05-F9548F2AF894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuarioApp.Test", "UsuarioTest\UsuarioApp.Test.csproj", "{85D1D1F0-74E3-49F5-BA05-F9548F2AF894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
