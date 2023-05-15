@@ -15,7 +15,7 @@ namespace UsuariosApp.API.Extensions
             services.AddTransient<IUsuarioAppService, UsuarioAppService>();
             services.AddTransient<IUsuarioDomainService, UsuarioDomainService>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddDbContext<DataContext>();
+
             return services;
         }
     }
