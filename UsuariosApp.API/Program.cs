@@ -1,4 +1,4 @@
-#region builder
+#region services
 using UsuariosApp.API.Extensions;
 using UsuariosApp.API.Extentions;
 using UsuariosApp.API.Middlewares;
@@ -13,7 +13,7 @@ builder.Services.AddEntityFramework(builder.Configuration);
 builder.Services.AddAutoMapperProfiles();
 
 #endregion
-#region
+#region builder
 var app = builder.Build();
 
 app.UseSwaggerDoc();
