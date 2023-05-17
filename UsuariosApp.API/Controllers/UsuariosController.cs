@@ -17,6 +17,16 @@ namespace UsuariosApp.API.Controllers
             _usuarioAppService = usuarioAppService;
         }
 
+        /// <summary>
+        /// Criação de conta de usuários
+        /// </summary>
+        [HttpPost]
+        [Route("criar-conta")]
+        [ProducesResponseType(typeof(CriarContaResponseDTO), StatusCodes.Status200OK)]
+        public IActionResult CriarConta(CriarContaRequestDTO usuarioDto) 
+        {
+            return StatusCode(201, _usuarioAppService?.CriarConta(usuarioDto));
+        }
 
         /// <summary>
         /// Autenticação de usuários
@@ -26,19 +36,19 @@ namespace UsuariosApp.API.Controllers
         [ProducesResponseType(typeof(AutenticarResponseDTO), StatusCodes.Status200OK)]
         public IActionResult Autenticar(AutenticarRequestDTO usuarioDto)
         {
-            //return Ok(_usuarioAppService.Autenticar(usuarioDto));
-            throw new NotImplementedException();
+            return StatusCode(200, _usuarioAppService?.Autenticar(usuarioDto));
         }
         
+
         /// <summary>
-        /// Criação de conta de usuários
+        /// Recuperar senha do usuário
         /// </summary>
         [HttpPost]
-        [Route("criar-conta")]
-        [ProducesResponseType(typeof(CriarContaResponseDTO), StatusCodes.Status201Created)]
-        public IActionResult CriarConta(CriarContaRequestDTO usuarioDto) 
+        [Route("recuperar-senha")]
+        [ProducesResponseType(typeof(RecuperarSenhaRequestDTO), StatusCodes.Status200OK)]
+        public IActionResult RecuperarSenha(RecuperarSenhaRequestDTO usuarioDto)
         {
-            return StatusCode(201, _usuarioAppService.CriarConta(usuarioDto));
+            return StatusCode(200, _usuarioAppService?.RecuperarSenha(usuarioDto));
         }
     }
 }

@@ -10,6 +10,7 @@ namespace UsuariosApp.Domain.Interfaces.Services
     public interface IUsuarioDomainService : IDisposable
     {
         void CriarConta(Usuario usuario);
-        //void Autenticar(Usuario usuario);
+        Usuario Autenticar(string email, string senha);
+        Usuario RecuperarSenha(string email);
     }
 }
